@@ -14,7 +14,7 @@ function Login() {
             localStorage.setItem('token', response.data.token) 
             navigate('/')
         } catch (error) {
-            alert('Email ou senha incorretos')
+            alert(error.response?.data?.message || 'Email ou senha incorretos')
         }
 
     }
