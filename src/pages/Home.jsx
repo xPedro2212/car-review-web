@@ -29,7 +29,7 @@ function Home() {
                 <button type="submit">Buscar</button>
             </form>
             {cars.map((car) => (
-                <div key={car.id}>
+                <div key={car.id} onClick={() => navigate ('/cars/' + car.id)} style={{cursor:'pointer'}}>
                     <p>{car.brand} {car.model} {car.year}</p>
                 </div>
             ))}
